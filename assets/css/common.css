@@ -447,6 +447,7 @@ header {
 @media (max-width: 768px) {
     .footer-description {
         text-align: left;
+        text-align: justify;
     }
 
     .contact-item {
