@@ -35,3 +35,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+  const images = [
+    "assets/images/2012.jpg",
+    "assets/images/Fabrication.webp",
+  ];
+
+  let current = 0;
+  const heroBg = document.querySelector(".hero-bg");
+
+  function changeBg() {
+    heroBg.style.backgroundImage = `url('${images[current]}')`;
+    current = (current + 1) % images.length;
+  }
+
+  changeBg(); // initial call
+  setInterval(changeBg, 4000); // 4 sec interval
+
+
