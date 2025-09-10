@@ -36,11 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
   const images = [
-    "assets/images/2012.jpg",
+    "assets/images/elevators.jpg",
     "assets/images/Fabrication.webp",
-    "assets/images/Fabrication.webp",
-    "assets/images/Fabrication.webp",
-    "assets/images/tinsheds1.jpg",
+    "assets/images/tinshed2.jpg",
+    "assets/images/steelstructure.jpg"
 
   ];
 

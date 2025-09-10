@@ -1831,10 +1831,10 @@ a {
 
 /* Contact Hero Section - matching About style */
 .contact-hero {
-    height: 70vh;
+    height: 80vh;
     padding: 0 10rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.733)),
-        url('../images/tinsheds1.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.267)),
+        url('../images/tinshed2.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
