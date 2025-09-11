@@ -170,6 +170,9 @@ header {
         width: 100%;
         color: #34495e;
     }
+    .menu-toggle span {
+       background-color: #f8f9fa;
+    }
 }
 
 @media (max-width: 480px) {
