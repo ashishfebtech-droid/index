@@ -54,4 +54,3 @@ document.addEventListener("DOMContentLoaded", function () {
   changeBg(); // initial call
   setInterval(changeBg, 3000); // 4 sec interval
 
-
