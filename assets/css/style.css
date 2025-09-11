@@ -227,11 +227,19 @@ a {
     box-shadow: var(--shadow);
     animation: fadeInUp 0.8s ease-out;
 }
+.section-title1 {
+    font-size: 3vw;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
 
 .section-title {
     font-size: 3vw;
     font-weight: 800;
-    color: var(--dark);
+    color: white !important;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     animation: fadeInUp 0.8s ease-out 0.2s both;
@@ -519,7 +527,7 @@ a {
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark);
+    color: white !important;
     margin-top: 1rem;
 }
 
@@ -653,14 +661,14 @@ a {
 
 /* About Hero Section - matching Services style */
 .about-hero {
-    height: 60vh;
+     height: 80vh;
     padding: 0 10rem;
-    background: linear-gradient(rgba(152, 135, 112, 0.8), rgba(152, 135, 112, 0.8)),
-        url('../images/4927.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.267)),
+        url('../images/aboutus.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 

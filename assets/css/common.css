@@ -150,9 +150,10 @@ header {
     .nav-links {
         flex-direction: column;
         width: 100%;
-        background: rgb(88, 252, 252);
+        background: rgb(255, 255, 255);
+        /* थोड़ा हल्का किया ताकि blur दिखे */
+
         position: absolute;
-       
         top: 100%;
         left: 0;
         padding: 1rem 2rem;
@@ -167,6 +168,7 @@ header {
     .nav-links a {
         padding: 0.75rem 1rem;
         width: 100%;
+        color: #34495e;
     }
 }
 
@@ -485,14 +487,14 @@ header {
 
 /* Breadcrumb */
 .breadcrumb {
-    background: var(--gray-100);
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--gray-200);
+    background: var(--gray-100) !important;
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid var(--gray-200) !important;
 }
 
 .breadcrumb-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
     padding: 0 2rem;
 }
 
@@ -1001,4 +1003,37 @@ header {
     .whatsapp-float {
         display: none;
     }
+}
+
+.rw-breadcrumb {
+    background: var(--gray-100) !important;
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid var(--gray-200) !important;
+}
+
+.rw-breadcrumb-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.rw-breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.rw-breadcrumb-list a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.rw-breadcrumb-list a:hover {
+    color: var(--accent);
+}
+
+.rw-breadcrumb-separator {
+    color: var(--gray-600);
 }
