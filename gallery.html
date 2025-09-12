@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Royal Engineering Works</title>
+  <title>Gallery - Royal Engineering Works</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/common.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -21,58 +21,90 @@
       padding: 40px 0;
     }
 
-    h2 {
+    h2,
+    h3,
+    h4 {
       text-align: center;
       margin-bottom: 20px;
     }
 
-    .swiper {
-      width: 90%;
-      max-width: 900px;
+    .section-container {
+      width: 95%;
+      max-width: 1000px;
       margin: auto;
+      margin-bottom: 40px;
     }
 
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    video {
+    /* Portrait videos: bigger height, slider 2 columns on desktop */
+    .portrait-swiper .swiper-slide video {
       width: 100%;
-      max-height: 500px;
-      border-radius: 10px;
-      background: black;
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-
-      margin: auto;
-    }
-
-    .image-grid img {
-      width: 100%;
-      border-radius: 10px;
+      height: 800px;
       object-fit: cover;
+      border-radius: 10px;
     }
 
+    /* Landscape videos: smaller height, slider 1 column */
+    .landscape-swiper .swiper-slide video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Swiper pagination & navigation */
+    .swiper-pagination-bullet {
+      background: #000;
+      opacity: 0.7;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #000;
+    }
+
+    /* Single column images */
     .single-image-grid {
       display: grid;
       grid-template-columns: 1fr;
-      /* single column */
       gap: 20px;
-      width: 90%;
       max-width: 1000px;
       margin: auto;
+      margin-bottom: 40px;
     }
 
     .single-image-grid img {
       width: 100%;
-      border-radius: 10px;
       object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Two-column image grid */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        /* thoda gap chhota kiya mobile ke liye */
+      }
+    }
+
+    .landscape-swiper {
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -82,7 +114,8 @@
     <div class="top-nav-content">
       <div>
         <p>
-          <a href="mailto:info@royalengineering.com"><i class="ri-mail-fill"></i> info@royalengineering.com</a>
+          <a href="mailto:info@royalengineering.com"><i class="ri-mail-fill"></i>
+            info@royalengineering.com</a>
         </p>
       </div>
       <div>
@@ -94,10 +127,11 @@
     </div>
   </div>
 
+  <!-- Header -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">
-        <img src="assets/images/logohj.png" alt="Royal Engineering Works Logo">
+        <img src="assets\images\logohj.png" alt="Royal Engineering Works Logo">
       </a>
 
       <ul class="nav-links" id="nav-links">
@@ -122,6 +156,7 @@
     </nav>
   </header>
 
+  <!-- Breadcrumb -->
   <div class="breadcrumb">
     <div class="breadcrumb-container">
       <ul class="breadcrumb-list">
@@ -132,214 +167,74 @@
     </div>
   </div>
 
-  <!-- Contact Hero Section -->
   <section class="contact-hero">
     <div class="contact-hero-content">
       <h1>Royal Engineering Works</h1>
       <p>Reliable fabrication & engineering services in Haridwar, Uttarakhand</p>
     </div>
   </section>
+  <div class="contact-container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-badge">Work gallery</span>
+      <h2 class="section-title">Our Services in Action</h2>
+    </div>
 
-  <div class="section-header">
-    <span class="section-badge">About Royal Engineering Works</span>
-    <h2 class="section-title">Your Trusted Partner in Fabrication & Engineering</h2>
-  </div>
+    <!-- Portrait Videos -->
+    <section class="section-container">
+      <div class="swiper portrait-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><video controls muted src="assets/images/5v.mp4"></video></div>
+          <div class="swiper-slide"><video controls muted src="assets/images/6v.mp4"></video></div>
+          <div class="swiper-slide"><video controls muted src="assets/images/7v.mp4"></video></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="swiper landscape-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><video controls muted src="assets/images/10v.mp4"></video></div>
+          <div class="swiper-slide"><video controls muted src="assets/images/11v.mp4"></video></div>
+          <div class="swiper-slide"><video controls muted src="assets/images/15.mp4"></video></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
 
-  <!-- Elevator Section -->
-  <section id="elevator">
-    <div class="gallery-header">
-      <h3>Our Services</h3>
-      <p>Comprehensive engineering & fabrication solutions</p>
+    <!-- Single Column Images -->
+    <section class="section-container">
+      <div class="section-header">
+      <h2 class="section-title">Project Snapshots</h2>
     </div>
-    <div class="swiper elevator-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets/images/5v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets/images/6v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets/images/7v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets/images/8v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets/images/9v.mp4" type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
-  <!-- Elevator Section -->
-  <section id="elevator">
-    <div class="gallery-header">
-      <h3>Our Services</h3>
-      <p>Comprehensive engineering & fabrication solutions</p>
-    </div>
-    <div class="swiper elevator-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets\images\freecompress-18v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets\images\freecompress-19v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets\images\17v.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
-
-  <!-- Elevator Section -->
-  <section id="elevator">
-    <div class="gallery-header">
-      <h3>Our Services</h3>
-      <p>Comprehensive engineering & fabrication solutions</p>
-    </div>
-    <div class="swiper elevator-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets\images\10v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets\images\11v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets\images\15.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets/images/16v.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <video controls muted>
-            <source src="assets\images\freecompress-20v.mp4" type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
-  <section id="single-column-gallery">
-    <div class="gallery-header">
-      <h3>Project Highlights</h3>
-      <p>Take a closer look at our completed works</p>
-    </div>
-    <div class="single-image-grid">
-      <div class="single-image-item">
-        <img src="assets/images/14.jpg" alt="Project Image 1">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/22.jpg" alt="Project Image 2">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/23.jpg" alt="Project Image 3">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/24.jpg" alt="Project Image 4">
-      </div>
-
-      <div class="single-image-item">
-        <img src="assets/images/26.jpg" alt="Project Image 4">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/27.jpg" alt="Project Image 4">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/28.jpg" alt="Project Image 4">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/29.jpg" alt="Project Image 4">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/30.jpg" alt="Project Image 4">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/31.jpg" alt="Project Image 4">
-      </div>
-      <div class="single-image-item">
-        <img src="assets/images/32.jpg" alt="Project Image 4">
+      <div class="single-image-grid">
+        <img src="assets/images/14.jpg" alt="Image 1">
+        <img src="assets/images/22.jpg" alt="Image 2">
+        <img src="assets/images/23.jpg" alt="Image 3">
+        <img src="assets/images/24.jpg" alt="Image 4">
       </div>
       <div class="image-grid">
-        <div class="image-item">
-          <img src="assets/images/1.jpg" alt="Gallery Image 1">
-        </div>
-        <div class="image-item">
-          <img src="assets/images/2.jpg" alt="Gallery Image 2">
-        </div>
-        <div class="image-item">
-          <img src="assets/images/3.jpg" alt="Gallery Image 3">
-        </div>
-        <div class="image-item">
-          <img src="assets/images/4.jpg" alt="Gallery Image 4">
-        </div>
-        <div class="image-item">
-          <img src="assets/images/12.jpg" alt="Gallery Image 5">
-        </div>
-        <div class="image-item">
-          <img src="assets/images/13.jpg" alt="Gallery Image 5">
-        </div>
-        <div class="image-item">
-          <img src="assets/images/25.jpg" alt="Gallery Image 5">
-        </div>
+        <img src="assets/images/1.jpg" alt="Image 1">
+        <img src="assets/images/2.jpg" alt="Image 2">
+        <img src="assets/images/3.jpg" alt="Image 3">
+        <img src="assets/images/4.jpg" alt="Image 4">
       </div>
-    </div>
+    </section>
 
-  </section>
-
-
-
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    function initSwiper(className) {
-      return new Swiper(className, {
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Portrait videos swiper: 2 slides on desktop
+      new Swiper('.portrait-swiper', {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 20,
-        breakpoints: {
-          768: {  // ≥768px show 2 videos
-            slidesPerView: 2
-          }
-        },
-        pagination: { el: className + " .swiper-pagination", clickable: true },
+        breakpoints: { 768: { slidesPerView: 2 } },
+        pagination: { el: '.portrait-swiper .swiper-pagination', clickable: true },
         navigation: {
-          nextEl: className + " .swiper-button-next",
-          prevEl: className + " .swiper-button-prev",
+          nextEl: '.portrait-swiper .swiper-button-next',
+          prevEl: '.portrait-swiper .swiper-button-prev',
         },
         on: {
           slideChangeTransitionStart: function () {
@@ -349,18 +244,37 @@
             });
           },
           slideChangeTransitionEnd: function () {
-            let activeSlide = this.slides[this.activeIndex];
-            let video = activeSlide.querySelector("video");
+            let video = this.slides[this.activeIndex].querySelector("video");
             if (video) video.play();
           }
         }
       });
-    }
 
-    initSwiper(".elevator-swiper");
-    initSwiper(".structure-swiper");
-    initSwiper(".roof-swiper");
-  </script>
+      // Landscape videos swiper: 1 slide only
+      new Swiper('.landscape-swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: { el: '.landscape-swiper .swiper-pagination', clickable: true },
+        navigation: {
+          nextEl: '.landscape-swiper .swiper-button-next',
+          prevEl: '.landscape-swiper .swiper-button-prev',
+        },
+        on: {
+          slideChangeTransitionStart: function () {
+            this.slides.forEach(slide => {
+              let video = slide.querySelector("video");
+              if (video) video.pause();
+            });
+          },
+          slideChangeTransitionEnd: function () {
+            let video = this.slides[this.activeIndex].querySelector("video");
+            if (video) video.play();
+          }
+        }
+      });
+    </script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
