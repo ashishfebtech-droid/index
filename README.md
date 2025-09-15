@@ -1,9 +1,34 @@
-# 👗 Modern Trading Company – Fashion Website (Client)
+# Royal Engineering Works — README
 
-A modern, responsive client-side website for **Modern Trading Company**, Delhi's premium hub for ladies' fashion. The site showcases their rich collection of imported and exported garments and highlights their trusted presence in the Indian fashion industry.
+## 🏗 About Us
 
---- [https://moderntradingcompany.com]
+Royal Engineering Works provides **fabrication, erection, heavy structures, tin sheds, Pre-Engineered Building (PEB) structure sheds, and goods elevators** with a strong focus on quality, durability, and timely delivery. Based in **Mahmoodpur, Piran Kaliyar Sareef, Distt Haridwar, Uttarakhand – 247667**, we are committed to delivering engineering excellence across every project.
 
-## 🏢 About the Brand
+## 🔧 Our Services
 
-**Modern Trading Company** is located in the heart of **Shalimar Bagh, Delhi**, and is a leading name in the import and export of premium ladies' fashion wear. Led by **Vishal Singh** and **Vikram Jeet Singh**, the company is known for high-quality garments and strong business relationships.
+* Fabrication & Erection
+* Heavy Steel Structures
+* Tin Sheds
+* Pre-Engineered Building (PEB) Sheds
+* Goods Elevators
+* Customized Engineering Solutions
+
+## 📂 Projects
+
+* Industrial warehouse sheds
+* Factory structural frameworks
+* Commercial roofing solutions
+* PEB sheds installation
+* Goods elevator setups
+* Heavy-duty fabrication works
+
+## 🌟 Our Promise
+
+Quality workmanship, durable structures, and on-time delivery with reliable service.
+
+## 📞 Contact
+
+**Royal Engineering Works**
+Address: Mahmoodpur, Piran Kaliyar Sareef, Distt Haridwar, Uttarakhand – 247667
+Mobile: +91-9897157674, +91-9690212270
+Email: [info@royalengineeringworks.com](mailto:info@royalengineeringworks.com).
